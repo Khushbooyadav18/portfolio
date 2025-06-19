@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        *{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		body{
+			/*background-image: url('pexels-pixabay-268533.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;*/
+			background-color:rgb(3,63,86);
+		}
+		.header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 20px 10%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			z-index: 100;
+
+		}
+        .logo{
+            text-decoration: none;
+            font-size: 40px;
+			color: yellow ;
+			font-weight: 800;
+            cursor: default;
+			-webkit-box-reflect: below -10px linear-gradient(transparent,#0005);
+			opacity: 1;
+			animation: slidetop 1s ease forwards;
+        }
+		 
+		.navbar a{
+			font-size: 18px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 500;
+			margin-left: 35px;
+			transition: .3s ;
+            opacity: 1;
+            animation: slidetop .5s ease forwards;
+            animation-delay: calc(.2s * var(--i));
+
+		}
+		
+		.navbar a:hover,
+		.navbar a.active{
+			color: #0ef;
+		} 
+		
+		 @keyframes text{
+       	0%{
+       		width: 0ch;
+       	}
+       	50%{
+       		width: 18ch;
+       	}
+       }
+       .navbar a{
+       	border:2px solid  black ;
+       	border-radius: 15px;
+       	padding: 10px;
+       	background-color: #111;
+       	color: grey;
+      
+       }
+       .navbar a:hover,
+	   .navbar a.active{
+       	border: 2px solid #0ef;
+       	border-radius: 15px ;
+       	margin-left: 20px;
+        text-decoration: underline ;
+		box-shadow: 10px 10px 20px aqua;
+        text-decoration: underline;
+       }
+       .logo:hover{
+       	padding-left: 20px;
+       	font-style: unset;
+       	 
+       } 
+       .education .box-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 1rem 0;
+        padding-left: 3rem;
+       }
+       .education .box-container .box{
+        width: 27rem;
+        margin: 4rem 1rem;
+        padding-left: 4rem;
+        transition: 2s;
+        border-left: .2rem solid #fff;
+        position: relative;
+       }
+       .education .box-container .box span{
+        font-size: 1.3rem;
+        color: #fff;
+        border-radius: 5rem;
+        padding: 5rem 2.5rem;
+       }
+       .education .box-container .box h3{
+        font-size: 2rem;
+        color:#fff;
+        padding: 1rem 0;
+       }
+       .education .box-container .box i{
+        position: absolute;
+        top: -1.5rem; left: -2.5rem;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        line-height: 5rem;
+        text-align: center;
+        font-size: 2rem;
+        color:#fff;
+        background: var(--yellow);
+       }
+       p{
+        color: yellow;
+        font-size: 20px;
+       }
+      h1{
+        justify-content: center;
+        align-items: center;
+       }
+       button{
+        cursor: pointer;
+        border: 2px solid aqua;
+        margin-top: 10px;
+        height: 30px;
+        border-radius: 20px;
+        width: 90px;
+        transition: 1s;
+        font-size: 16px;
+        background: #111;
+        color: yellow;
+       }
+		button:hover{
+            background: yellow;
+            color:black;
+            font-weight: 600;
+            border: 3.5px solid rgb(140, 13, 54);
+        }
+        .box:hover{
+            box-shadow: 1px 10px 40px aquamarine;
+            border-radius: 30px;
+            
+        }
+        .education{
+            margin-top: 80px;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="header">
+		<a href="#" class="logo">Portfolio</a>
+		<nav class="navbar">
+			<a href=portfolio.html style="--i:1" >Home</a>
+			<a href="about.html" style="--i:2;">About</a>
+			<a href="education.html" style=" --i:3" class=" active " ;>Education</a>
+			<a href="skills.html" style="--i:4;">Skills</a>
+			<a href="contact.html" style="--i:5;">Contact</a>
+		</nav>
+	</header>
+    <section class="education" id="education">
+        <!-- <h1 class="heading">my <span>education</span></h1> -->
+        <div class="box-container">
+         <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2018</span>
+            <h3>High schooling</h3>
+            <ul>
+                <li><p>Board:  Uttar Pradesh Board</p></li>
+                <li><p>School:  Shri Ram Shiksha Mandir Inter College (Baraut)</p></li>
+                <li><p>percentage:  82.33%</p></li>
+            
+            </ul>
+            <button>Scorecard</button>
+         </div>
+         <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2020</span>
+            <h3>Intermediate</h3>
+            <ul>
+            <li><p>Board:  Uttar Pradesh Board</p></li>
+            <li><p>School:  Shri Ram Shiksha Mandir Inter College (Baraut)</p></li>
+            <li><p>percentage:  77.66%</p></li>
+            </ul>
+            <button>Scorecard</button>
+         </div>
+         <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2021</span>
+            <h3>Army$ Navy SSB</h3>
+        <h3 style="color: aqua;">Army</h1>
+        <h4 style="font-size: 20px; color: yellow;">SSB CENTER: Visakhapatanm(VIZAG)</h3>
+            <h3 style="font-size: 20px; color: yellow;">Entery: B.TECH</h3>
+        <button style="width: 110px;"> Callup Letter</button>
+       
+        <h3 style="color: aqua;">Navy</h1>
+        <h4 style="font-size: 20px; color: yellow;">SSB CENTER: Bangalore</h3>
+            <h3 style="font-size: 20px; color: yellow;">Entery: B.TECH</h3>
+        <button style="width: 110px;"> Callup Letter</button>
+         </div>
+         <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2022</span>
+            <h3>JEE Main and Advance</h3>
+            <p>Percentile: 82.99</p>
+            <p>Category Rank: 51433 </p>
+            <p>AIR: 1,09,261</p>
+            <button>Scorecard</button>
+         </div>
+         <div class="box">
+            <i class="fas fa-graduation-cap"></i>
+            <span>2022</span>
+            <ul>
+            <h3>Computer science Engineering</h3>
+            <li><h5 style="font-size: 20px; color: yellow"; >College: Quantum University(ROORKEE)</h4></li>
+                <li><h5 style="font-size: 20px; color: yellow">Program: B.Tech</h4></li>
+                <li><h5 style="font-size: 20px; color: yellow">Branch: CSE</h4></li>
+            </ul>
+         </div>
+        </div>
+
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>about</title>
+	<style >
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		body{
+			/*background-image: url('pexels-pixabay-268533.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;*/
+			background-color:rgb(3,63,86);
+		}
+		.header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 20px 10%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			z-index: 100;
+
+		}
+		 .logo {
+			text-decoration: none;
+			font-size: 40px;
+			color: yellow ;
+			font-weight: 800;
+			cursor: default;
+			-webkit-box-reflect: below -10px linear-gradient(transparent,#0005);
+			opacity: 0;
+			animation: slidetop 1s ease forwards;
+
+
+		}
+		.navbar a{
+			font-size: 18px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 500;
+			margin-left: 35px;
+			transition: .3s ;
+            opacity: 0;
+            animation: slidetop .5s ease forwards;
+            animation-delay: calc(.2s * var(--i));
+
+		}
+		
+		.navbar a:hover,
+		.navbar a.active{
+			color: #0ef;
+			text-decoration: underline;
+		}
+		
+		@keyframes text{
+       	0%{
+       		width: 0ch;
+       	}
+       	50%{
+       		width: 18ch;
+       	}
+       }
+       .social a:hover{
+       	border-radius:  p;
+       }
+       .navbar a{
+       	border:2px solid  black ;
+       	border-radius: 15px;
+       	padding: 10px;
+       	background-color: #111;
+       	color: grey;
+      
+       }
+       .navbar a:hover,
+	   .navbar a.active{
+       	border: 2px solid #0ef;
+       	border-radius: 15px ;
+       	margin-left: 20px;
+		box-shadow: 10px 10px 20px rgb(4, 247, 247);
+       }
+       .logo:hover{
+       	padding-left: 20px;
+       	font-style: unset;
+       	 
+       }
+       .section{
+       	display: flex;
+       	justify-content: space-between;
+
+       }
+       .about h3{
+       	align-items: center;
+       	padding-top: 120px;
+       	padding-right: 400px;
+       	font-weight: 600;
+       	font-size: 40px;
+       	color: white;
+       }
+       .p{
+       	padding-right: 100px;
+       	padding-top: 30px;
+       	font-size: 25px;
+		color: yellow;
+      
+       }
+       h4{
+       	padding-top: 20px;
+       }
+       .text{
+       	width: 0;
+       	overflow: hidden;
+       	white-space: nowrap;
+       	animation: pre 5s steps(20) infinite alternate ;
+       	border-right: 3px solid transparent;
+       	color: #0ef;
+       }
+       @keyframes pre {
+       	0%{
+       		width: 0ch;
+       	}
+       	50%{
+            width: 18ch;
+       	}
+
+       }
+
+    @keyframes slidetop {
+       	0% { 
+       		opacity: 0;
+       		transform: translateY(100px);
+       		
+       	}
+       	100%{
+       		opacity: 1;
+       		transform: translateY(0);
+       	}
+       }
+       button{
+       	display: flex;
+       	height: 20px;
+		margin-bottom: 50px ;
+      margin-left: 550px;
+      border: 2px solid black;
+      height: 35px;
+      width: 95px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+      background-color: black;
+      color: grey;
+      opacity: 0;
+      animation:slidetop 2s ease forwards ;
+       }
+       button:hover{
+      border: 3px solid #0ef;
+      border-radius: 20px;
+      color: #0ef;
+       }
+	   img{
+		
+			margin-top: 150px;
+			margin-left: 40px;
+	 box-shadow: 10px 15px 30px rgb(4, 200, 254);
+	 background-position: center;
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 border-radius: 20%;
+	 height: 350px;
+			animation: slidetop 3s ease forwards;
+			 
+			 
+	   }
+	   img:hover{
+		box-shadow: 10px 15px 30px yellow;
+	   }
+	</style>
+</head>
+<body>
+	<header class="header">
+		<a href="#" class="logo">Portfolio</a>
+		<nav class="navbar">
+			<a href="portfolio.html" style="--i:1;">Home</a>
+			<a href="about.html" style="--i:2;" class=" active">About</a>
+			<a href="education.html" style="--i:3;">Education</a>
+			<a href="skills.html" style="--i:4;">Skills</a>
+			<a href="contact.html" style="--i:5;">Contact</a>
+		</nav>
+	</header>
+	<section class="section">
+		<div class="img">
+			<img src="g.jpeg">
+			</div>
+		<div class="about">
+			<div>
+			<h3>About <b style="color: yellow;">Me</b></h3>
+			<h4 class="text" style="font-size:30px; font-weight: 600; color: #fff;">Frontend Devloper </h4>
+		</div>
+			<p>
+   		<pre class="p">
+I am Gaurav Kumar and i am the student of Quantum University.
+I am the frontend Developer .
+sapiente official ut minus lorem, ipsum aolar sit amet 
+sint amet saluta expeita temporibus aliquam eveniam,
+sapiente official ut minus consecture adipicing elit.Hil
+sapiente official ut minus lorem, ipsum aolar sit amet </pre></p>
+		</div>
+		
+	</section>
+	<button>Read More</button>
+
+
+</body>
+</html>

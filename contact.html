@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact</title>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		body{
+			/*background-image: url('pexels-pixabay-268533.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;*/
+			background-color: rgb(3, 63, 86);
+		}
+		.header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 20px 10%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			z-index: 100;
+
+		}
+		 .logo {
+			text-decoration: none;
+			font-size: 40px;
+			color: yellow ;
+			font-weight: 800;
+			cursor: default;
+			-webkit-box-reflect: below -10px linear-gradient(transparent,#0005);
+			opacity: 0;
+			animation: slidetop 2s ease forwards;
+
+		}
+		.navbar a{
+			font-size: 18px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 500;
+			margin-left: 35px;
+			transition: .3s ;
+            opacity: 0;
+            animation: slidetop .5s ease forwards;
+            animation-delay: calc(.2s * var(--i));
+
+		}
+		.navbar a{
+       	border:2px solid  black ;
+       	border-radius: 15px;
+       	padding: 10px;
+       	background-color: #111;
+       	color: aqua;
+       }
+       .navbar a:hover{
+       	border: 2px solid #0ef;
+       	border-radius: 15px ;
+       	margin-left: 20px;
+		box-shadow: 10px 15px 30px rgb(0, 255, 255);
+       }
+		.navbar a:hover,
+		.navbar a.active {
+			color: #0ef;
+			box-shadow: 10px 15px 30px rgb(0, 255, 255);
+			text-decoration: underline;
+		}
+		.logo:hover{
+       	padding-left: 20px;
+       	font-style: unset;
+       	 
+       }
+
+    @keyframes slidetop {
+       	0% { 
+       		opacity: 0;
+       		transform: translateY(100px);
+       		
+       	}
+       	100%{
+       		opacity: 1;
+       		transform: translateY(0);
+       	}
+       }
+	   .bbox{
+		display: flex;
+		justify-content: space-between;
+		padding-top: 150px;
+	   }
+	   .mbox{
+		padding-left: 120px;
+	   }
+	   .form{
+		padding-right: 30px;
+		width: 500px;
+	   }
+	   input{
+		margin-top:10px ;
+		border: 2px solid yellow;
+		height: 40px;
+		width: 300px;
+		
+		border-radius: 50px;
+		background-color: #111;
+		text-align: center;
+		color: aqua;
+
+	   }
+	   textarea{
+		margin-top: 20px;
+		border-radius: 20px;
+		width: 300px;
+		height: 200px;
+		background-color: #111;
+		color: #0ef;
+	   }
+	   button{
+		margin-top: 20px;
+		border: 4px solid aqua;
+		width: 100px;
+		border-radius: 50px;
+		height:30px ;
+		background-color: yellow;
+
+	} 
+	button:hover{
+		background-color: #111;
+		border: 4px solid yellow;
+		color: aqua;
+	}
+	footer{
+		margin-top: 40px;
+		
+		border: 1px solid yellow outset;
+		box-shadow: 1px 10px 40px rgb(151, 241, 6);
+		
+		
+	}
+	
+p{
+	font-size: 30px;
+	color: antiquewhite;
+}
+.social a{
+			display: inline-block;
+			justify-content: center;
+			align-items: center;
+			padding-top: 6px;
+		    text-align: center;
+			width: 40px;
+			height: 40px;
+			background-color: #111;
+		    border: 2px solid #111;
+		    border-radius: 50%;
+			font-size:26px;
+			color: rgb(12, 159, 216);
+			margin: 3px;
+			opacity: 0;
+			animation: slidetop 1s ease forwards;
+			animation-delay: calc(.2s * var(--i));
+			margin-top: 10px;
+
+		}
+		.social a:hover{
+			color: #111;
+			background-color: rgb(12, 159, 216);
+		}
+		.mbox{
+			margin-top: 20px;
+			line-gap-override: 5px;
+
+		}
+		.g{
+			opacity: 1;
+
+		}
+	   
+	</style>
+</head>
+<body>
+<header class="header">
+		<a href="#" class="logo">Portfolio</a>
+		<nav class="navbar">
+			<a href="portfolio.html" style="--i:1" >Home</a>
+			<a href="about.html" style="--i:2;">About</a>
+			<a href="education.html" style="--i:3;">Education</a>
+			<a href="skills.html" style="--i:4;">skills</a>
+			<a href="contact.html"  class="active" style="--i:5;">Contact</a>
+		</nav>
+	</header>
+	<section >
+		<div class="bbox">
+			<div class="mbox">
+				<h1 style="font-size: 40px; color: rgb(13, 188, 236);">Contect Me</h1><br>
+				<p><i class='bx bx-envelope'></i> : Gauravkuma4088@gmail.com</p>
+				<br>
+				<p><i class='bx bxs-phone'></i> : 90279077741</p>
+				<br><br>
+				<div class="social">
+					<a href="#" style="--i:1;"><i class='bx bxl-facebook'></i></a><br>
+					<a href="#" style="--i:2;"><i class='bx bxl-linkedin'></i></a><br>
+					<a href="#" style="--i:3;"><i class='bx bxl-instagram-alt'></i></a><br>
+					<a href="#" style="--i:4;"><i class='bx bxl-twitter'></i></a>
+					
+			  </div>
+
+			</div>
+			<div class="form">
+				<form>
+					<input style="border-radius: 70px;" type="text" name="NAME" placeholder="Your name" required><br>
+					<input type="email" name="email" placeholder="Your emali" required><br>
+					<textarea style="border: 5px solid yellow;"  name="text" id="area" rows="10 "></textarea><br>
+					<button type="submit"> submit</button>
+					<p style="font-size: 30px;padding-left: px; 
+					padding-top: 10px; color: yellow; font-weight: 600;">send me</p>
+				</form>
+
+			</div>
+		</div>
+		 
+	</section>
+	<footer>
+		<div class="gk">
+		<p style="text-align: center; font-size: 30px; font-weight: 800;">@Copyright</p><br><br>
+		<!-- <p style="text-align: center; font-size: 30px; font-weight: 800;">Design By:#GK(GauravKhushboo)</p> -->
+		</div>
+	</footer>
+	
+</body>
+</html>

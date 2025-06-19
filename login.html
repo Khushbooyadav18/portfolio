@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image:url('IMG-4.jpg') ;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width:100% ;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo{
+            font-size: 30px;
+            color: white;
+            font-weight: 800;
+        }
+        .navigation a{
+            position: relative;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: 500;
+            color: white;
+            margin-left: 20px;
+            padding-right: 40px;
+        }
+        .navigation a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 90%;
+            height: 3px;
+            background: #fff;
+            border-radius: 5px;
+            /* transform-origin: left; */
+            transform: scaleX(0);
+            transition: 0.9s;
+        }
+        .navigation a:hover::after{
+            transform: scaleX(1);
+        }
+            </style>
+</head>
+<body>
+    <header>
+        <h2 class="logo">LOGO</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                 <span class="icon"></span>   
+                 <input type="email">
+                 <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"></span>   
+                    <input type="password">
+                    <label>Password</label>
+                   </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

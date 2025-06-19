@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio 2</title>
+    <script src="style-switcher.js"></script>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+        :root{
+            --bg-black-900:#f2f2fc;
+            --bg-black-100:#fdf9ff;
+            --bg-black-50:#e8dfec;
+            --text-black-900:#f2f2fc;
+            --text-black-700:#504e70;
+            --skin-color:#ec1839;
+        }
+        body{
+            line-height: 1.5;
+            font-size: 16px;
+        }
+        ::before,::after{
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+        }
+        .section{
+            background: var(--text-black-900);
+            min-height: 100vh;
+            padding: 0 30px;
+            display: block;
+            opacity: 1;
+        }
+        .hidden{
+            display: none !important;
+        }
+        .main-content{
+            padding-left: 270px;
+        }
+        .padd-15{
+            padding-left:15px ;
+            padding-right: 15px;
+        }
+        .container{
+            max-width: 1100px;
+            width: 100%;
+            margin: auto;
+        }
+        .section .container{
+            padding-top: 60px;
+            padding-bottom: 70px;
+        }
+        .section-title{
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 60px;
+        }
+        .row{
+            position: relative;
+            margin-left:-15px ;
+            margin-right: -15px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .section-title h2{
+            font-size: 40px;
+            color: var(--text-black-700);
+            font-weight: 700;
+            position: relative;
+        }
+        .section-title h2::before{
+           content: '';
+           height: 4px;
+           width: 50px;
+           background-color: var(--skin-color);
+           position: absolute;
+           top: 100%;
+           left :0;
+        }
+        .section-title h2::after{
+           content: '';
+           height: 4px;
+           width: 25px;
+           background-color: var(--skin-color);
+           position: absolute;
+           top: 100%;
+           left :0;
+           margin-top: 8px;
+        }
+        .btn{
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px 35px;
+            color: white;
+            border-radius: 40px;
+            display: inline-block;
+            white-space: nowrap;
+            background: var(--skin-color);
+            transition: all 0.3s ease;
+        }
+        .btn:hover{
+           transform: scale(1.05);
+        }
+        .shadow-dark{
+            box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+        }
+
+
+        /* aside */
+
+
+        .aside{
+            width: 270px;
+            background: var(--bg-black-100);
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 30px;
+            height: 100%;
+            border-right:1px solid var(--bg-black-50) ;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            z-index: 10;
+        }
+        .aside .logo{
+            position: absolute;
+            top: 50px;
+            font-size: 30px;
+            text-transform: capitalize;
+        }
+        .aside .logo a{
+             color: var(--text-black-700);
+             font-weight: 700;
+             padding: 15px 20px;
+             font-size: 30px;
+             letter-spacing: 5px;
+             position: relative;
+        }
+        .aside .logo a span{
+            font-size: 40px;
+        }
+        .aside .logo a::before{
+            content: '';
+            position:absolute;
+            width: 20px;
+            height: 20px;
+            border-bottom: 5px solid var(--skin-color);
+            border-left: 5px solid var(--skin-color);
+            bottom: 0;
+            left: 0;
+        }
+        .aside .logo a::after{
+            content: '';
+            position:absolute;
+            width: 20px;
+            height: 20px;
+            border-top: 5px solid var(--skin-color);
+            border-right: 5px solid var(--skin-color);
+            top: 0;
+            right: 0;
+        }
+        .aside .nav-toggler{
+            height: 40px;
+            width: 45px;
+            border: 1px solid var(--bg-black-50);
+            position: fixed;
+            cursor: pointer;
+            left: 300px;
+            top: 20px;
+            border-radius: 5px;
+            background: var(--bg-black-100);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        .aside .nav-toggler span{
+            height: 2px;
+            width: 18px;
+            background: var(--skin-color);
+            display: inline-block;
+            position: relative;
+        }
+        .aside .nav-toggler span::before{
+            content: '';
+            height: 2px;
+            width: 18px;
+            background: var(--skin-color);
+            position: absolute;
+            top: -6px;
+            left: 0;
+        }
+        .aside .nav-toggler span::after{
+            content: '';
+            height: 2px;
+            width: 18px;
+            background: var(--skin-color);
+            position: absolute;
+            top: 6px;
+            left: 0;
+        }
+        .aside .nav{
+            margin-top: 50px;
+        }
+        .aside .nav li{
+            margin-bottom: 20px;
+            display:block;
+        }
+        .aside .nav li a{
+            font-size: 16px;
+            font-weight: 600;
+            display: block;
+            border-bottom: 1px solid var(--bg-black-50);
+            color: var(--text-black-700);
+            padding:5px 15px;
+        }
+        .aside .nav li a.active{
+            color: var(--skin-color);
+        }
+        .aside .nav li a i{
+            margin-right: 15px;
+        }
+        /* home */
+        .home{
+            min-height: 100vh;
+            display: flex;
+            color: var(--text-black-700);
+        }
+        .home .home-info{
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+        h3.hello{
+            font-size: 28px;
+            margin: 15px 0;
+        }
+        h3.hello span{
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--skin-color);
+        }
+        h3.my-profession{
+            font-size: 30px;
+            margin: 15px 0;
+        }
+        .typing{
+            color: var(--skin-color);
+        }
+        .home-info p{
+            margin-bottom: 70px;
+            font-size: 20px;
+            color: var(--text-black-700);
+        }
+        .home .home-img{
+            flex: 0 0 40%;
+            max-width: 40%;
+            text-align: center; 
+            position: relative;
+        }
+        .home-img:after{
+            content: '';
+            position: absolute;
+            height: 80px;
+            width: 80px;
+            bottom: -40px;
+            border-bottom: 10px solid var(--skin-color);
+            border-right: 10px solid var(--skin-color);
+            right: 20px;
+        }
+        .home-img:before{
+            content: '';
+            position: absolute;
+            height: 80px;
+            width: 80px;
+            border-top: 10px solid var(--skin-color);
+            border-left: 10px solid var(--skin-color);
+            left: -20px;
+            top: -40px;
+        }
+        .home .home-img img{
+            margin: auto;
+            border-radius: 5px;
+            height:400px ;
+        }
+        /* About */
+        .about .about-content{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .about .about-content .timeline{
+            background-color: var(--text-black-700);
+            padding: 30px 15px;
+            border: 1px solid var(--skin-color);
+            width: 100%;
+            position: relative;
+            border-radius: 10px;
+        }
+        .about .about-content .timeline .timeline-item{
+            position: relative;
+            padding-left: 37px;
+            padding-bottom: 50px;
+        }
+        .about .about-content .timeline .timeline-item:last-child{
+            padding-bottom: 0;
+        }
+        .about .about-content .timeline .timeline-item::before{
+            content: "";
+            width: 1px;
+            position: absolute;
+            height: 100%;
+            left: 7px;
+            top: 0;
+            background-color: var(--skin-color);
+        }
+        .about .about-content .timeline .circle-dot{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: var(--skin-color);
+        }
+        .about .about-content .timeline .timeline-date {
+            font-weight: 400;
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: var(--text-black-700);
+        }
+        .about .about-content .timeline .timeline-date .fa{
+            margin-right: 5px;
+        }
+        .about .about-content .timeline .timeline-title{
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .about .about-content .about-text{
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+        .about .about-content .about-text h3{
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color:var(--text-black-700);
+        }
+        .about .about-content .about-text h3 span{
+            color: var(--skin-color);
+        }
+        .about .about-content .about-text p{
+            font-size: 16px;
+            line-height:1.5 ;
+            color: var(--text-black-700);
+        }
+        .about .about-content .personal-info{
+            flex: 0 0 60%;
+            max-width: 60%;
+            margin-top: 40px;
+        }
+        .about .about-content .personal-info .info-item{
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        .about .about-content .personal-info .info-item p{
+            font-weight: 600;
+            font-size: 16px;
+            padding: 10px 0;
+            color: var(--text-black-700);
+            border-bottom: 1px solid var(--bg-black-50);
+        }
+        .about .about-content .personal-info .info-item p span{
+            font-weight: 400;
+            color: var(--text-black-700);
+            margin-left: 4px;
+            display: inline-block;
+        }
+        .about .about-content .personal-info .buttons{
+            margin-top: 30px;
+        }
+        .about .about-content .personal-info .buttons .btn{
+            margin-right: 15px;
+            margin-top: 10px;
+        }
+        .about .about-content .skills{
+            flex: 0 0 40%;
+            min-width:40%;
+            margin-top: 40px;
+        }
+        .about .about-content .skills .skill-item{
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 25px;
+        }
+        .about .about-content .skills .skill-item h5{
+            line-height: 40px;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text-black-700);
+            text-transform: capitalize;
+        }
+        .about .about-content .skills .skill-item .progress{
+            background-color: var(--bg-black-50);
+            height: 7px;
+            border-radius: 4px;
+            width: 100%;
+            position: relative;
+        }
+        .about .about-content .skills .skill-item .progress .progress-in{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            border-radius: 4px;
+            background-color: var(--skin-color);
+        }
+        .about .about-content .skills .skill-item .skill-percent{
+            position: absolute;
+            right: 0;
+            top: -40px;
+            color: var(--text-black-700);
+            font-weight: 400;
+            line-height: 40px;
+            }
+            .about .about-content .education,
+            .about .about-content .experience{
+                flex: 0 0 50%;
+                max-width: 50%;
+                margin-top: 30px;
+            }
+            .about .about-content h3.title{
+                font-size: 24px;
+                margin-bottom: 30px;
+                font-weight: 700;
+                color:var(--text-black-700);
+            } 
+            .about .about-content .timeline-box{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .about .about-content .timeline{
+                background-color: var(--bg-black-100);
+                padding: 30px 15px;
+                border: 1px solid var(--bg-black-50);
+                border-radius: 10px;
+                width: 100%;
+                position: relative;
+            }
+            .about.about-content .timeline .timeline-item{
+                position: relative;
+                 padding-left: 37px;
+                padding-bottom: 50px;
+            }
+            .about.about-content .timeline .timeline-item:last-child{
+                padding-bottom: 0;
+            }
+            .about.about-content .timeline .timeline-item::before{
+                content: '';
+                width: 1px;
+                position: absolute;
+                height: 100%;
+                left: 7px;
+                top: 0;
+                background: var(--skin-color);
+            }
+          .about .about-content .timeline .timeline-date{
+            font-weight: 400;
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: var(--text-black-700);
+          }
+          .about .about-content .timeline .timeline-date .fa{
+            margin-right: 5px;
+          }
+          .about .about-content .timeline .timeline-title{
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 15px;
+            text-transform: capitalize;
+            color: var(--text-black-700);
+          }
+          .about .about-content .timeline .timeline-text{
+            line-height: 25px;
+            font-size: 16px;
+            text-align: justify;
+            color: var(--text-black-700);
+          }
+          /* service */
+       /* section{
+        margin-left: 30px;
+       } */
+       .small-1, .small-2 , .small-3{
+        padding-left: 130px;
+       }
+          section .container{
+            
+           max-width: 1100px; 
+         padding-bottom:40px ;
+          }
+          .service .service-item{
+            margin-bottom: 30px;
+            flex: 0 0 33.33%;
+             max-width: 33.33%;
+          }
+          .service .service-item .service-item-inner{
+            background-color: var(--bg-black-100);
+            border:  1px solid var(--bg-black-50);
+            border-radius: 10px;
+            padding: 30px 15px;
+            text-align: center;
+            transition: all 0.3S ease;
+          }
+          .service .service-item .service-item-inner:hover{
+            box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+          }
+          .service .service-item .service-item-inner .icon{
+            height: 60px;
+            width: 60px;
+            display: block;
+            border-radius: 50%;
+            margin: 0 auto  30px;
+            text-align: center;
+            transition: all 0.3s ease;
+          }
+          .service .service-item .service-item-inner .icon .fa{
+            font-size: 40px;
+            line-height: 60px;
+            color: var(--skin-color);
+            transition: all 0.3s ease;
+          }
+          .service .service-item .service-item-inner:hover .icon{
+            background: var(--skin-color);
+          }
+          .service .service-item .service-item-inner:hover .icon .fa{
+            font-size: 25px;
+            color: #ffffff;
+            }
+            .service .service-item .service-item-inner h4{
+                font-size: 18px;
+                margin-bottom: 15px;
+                font-weight: 700;
+                text-transform: capitalize;
+                color: var(--bg-black-700);
+            }
+            .service .service-item .service-item-inner p{
+                font-size: 16px;
+                color: var(--text-black-700);
+                line-height: 25px;
+            }
+            /* portfolio */
+            .portfolio .container{
+                padding-bottom: 40px;
+            }
+            .portfolio .portfolio-heading{
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 40px;
+            }
+            .portfolio .portfolio-heading h2{
+                columns: var(--text-black-700);
+                font-weight: 500;
+            }
+            .portfolio .portfolio-item{
+                flex: 0 0 33.33%; 
+                max-width: 33.33%;
+                margin-bottom: 30px;
+            }
+            .portfolio .portfolio-item-inner{
+                border: 6px solid var(--bg-black-100);
+                border-radius: 10px;
+                cursor: pointer;
+                overflow: hidden;
+            }
+            .portfolio .portfolio-item-inner .portfolio-img img{
+                width: 100%;
+                display: block;
+            }
+            /* contact */
+            .contact-title{
+                color: var(--skin-color);
+                text-align: center;
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+            .contact-sub-title{
+                color: var(--text-black-700);
+                text-align: center;
+                font-size: 15px;
+                margin-bottom: 60px;
+            }
+            .contact .contact-info-item{
+                flex: 0 0 25%;
+                max-width: 25%;
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            .contact .contact-info-item.icon{
+                display: inline-block;
+            }
+            .contact .contact-info-item .icon .fa{
+                font-size: 25px;
+                color: var(--skin-color);
+            }
+            .contact .contact-info-item h4{
+                font-size: 18px;
+                font-weight: 700;
+                text-transform: capitalize;
+                margin: 15px 0 15px;
+            }
+            .contact .contact-info-item p{
+                font-size: 16px;
+                line-height: 25px;
+                color: var(--text-black-700);
+                font-weight: 400;
+            }
+            .contact .contact-form{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .contact .contact-form .col-6{
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .contact .contact-form .col-12{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .contact .contact-form .form-item{
+                margin-bottom: 30px;
+            }
+            .contact .contact-form .form-item .form-control{
+                width: 100%;
+                height: 50px;
+                border-radius: 25px;
+                background: var(--bg-black-100);
+                border: 1px solid var(--bg-black-50);
+                padding: 10px 25px;
+                font-size: 16px;
+                color: var(--text-black-700);
+                transition: all 0.3s ease;
+            }
+            .contact .contact-form .form-item .form-control:focus{
+                box-shadow: 0 0 20x rgba(48,46,77,0.15);
+            }
+            .contact .contact-form .form-item textarea.form-control{
+                height: 140px;
+            }
+            .contact .contact-form .btn{
+                height: 50px;
+                padding: 0 50px;
+            }
+            @media (max-width:1199px){
+                .aside{
+                    left: -270px;
+                }
+                .main-content{
+                    padding-left: 0;
+                }
+                .about .about-content .personal-info .info-item p span{
+                    display: block;
+                    margin-left: 0;
+                }
+            }
+            @media(max-width:991px){
+                .contact .contact-info-item,
+                .service .service-item,
+                .portfolio .portfolio-item{
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+                .home .home-info{
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+                .home .home-img{
+                    display: none;
+                }
+            }
+            @media(max-width:767px){
+                .contact.contact-form .col-6,
+                .contact.contact-info-item,
+                .portfolio.portfolio-item,
+                .service .service-item,
+                .about .about-content .education,
+                .about .about-content .experience,
+              .about .about-content .skills,
+              .about .about-content .personal-info{
+                flex: 0 0 100%;
+                max-width: 100%;
+              }
+            }
+    </style>
+    <link rel="stylesheet" href="style-switcher.css">
+    <link rel="stylesheet" href="color-1.css">
+    <link rel="stylesheet" href="color-1.css" class="alternate-style" title="color-1" >
+    <link rel="stylesheet" href="color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="color-3.css" class="alternate-style" title="color-3" disabled >
+    <link rel="stylesheet" href="color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="color-5.css" class="alternate-style" title="color-5" disabled >
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+   <!-- ===== Main Container Start ===== -->
+    <div class="main-container">
+        <!-- ===== Aside Start ===== -->
+        <div class="aside">
+          <div class="logo">
+            <a href="#"><span>A</span>tlas</a>
+          </div>
+          <div class="nav-toggler">
+            <span></span>
+          </div>
+          <ul class="nav">
+            <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fa fa-user"></i>About</a></li>
+            <li><a href="#"><i class="fa fa-list"></i>Services</a></li>
+            <li><a href="#"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+            <li><a href="#"><i class="fa fa-comments"></i>Contact</a></li>
+          </ul>
+          </div>
+        </div>
+        <!-- ===== Aside End ===== -->
+        <!-- ===== Main Content Start ===== -->
+        <div class="main-content">
+        <!-- ===== Home Section Start ===== -->
+        <section class="home section " >
+             <div class="container">
+                <div class="row">
+                    <div class="home-info padd-15">
+                          <h3 class="hello">Hello, my name is<span class="name"> Khushboo Yadav</span></h3>
+                        <h3 class="my-profession">I'm a<span class="typing"> FRONTEND DEVELOPER</span></h3>
+                        <p>I'm a frontend developer currently I'm persuing from B.Tech cse from QUANTUM UNIVERSITY,roorkee. MY expertise is to create and website design , and many more... </p>
+                        <!-- <a href="#contact" class="btn hire-me">Hire Me</a> -->
+                    </div>
+                    <div class="home-img padd-15">
+                        <img src="IMG-20221121-WA0101.jpg"  alt="">
+                    </div>
+                </div>
+             </div>
+        </section>
+        <!-- ===== Home Section End ===== -->
+          <!-- ===== About Section Start ===== -->
+          <section class="about section ">
+            <div class="container">
+                <div class="row">
+                    <div class="section-title padd-15">
+                        <h2>About Me</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="about-content padd-15">
+                       <div class="row">
+                        <div class="about-text padd-15" >
+                            <h3>I'm Khushboo Yadav<span> Web Developer</span></h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus obcaecati sapiente id consequuntur maiores nam error soluta, dolorum quidem doloremque perferendis beatae veritatis, eos ab et incidunt odio accusantium distinctio ea molestias iste aperiam cupiditate. Praesentium, nulla magni omnis doloremque quibusdam minus. Sint fuga optio possimus suscipit aperiam iure, quaerat velit neque maiores eius minus!</p>
+                        </div>
+                       </div>
+                    <div class="row">
+                    <div class="personal-info padd-15" >
+                        <div class="row">
+                            <div class="info-item padd-15">
+                                <p>Birthday : <span>30 sept 2004</span></p>
+                            </div>
+                            <div class="info-item padd-15">
+                                <p>Age : <span>18</span></p>
+                            </div>
+                            <div class="info-item padd-15">
+                                <p>Website : <span>www.domain.com</span></p>
+                            </div>
+                            <div class="info-item padd-15">
+                                <p>Email : <span>kyadav94501@gmail.com</span></p>
+                            </div>
+                            <div class="info-item padd-15">
+                                <p>Degree : <span>CS</span></p>
+                            </div>
+                            <div class="info-item padd-15">
+                                <p>Phone : <span>8791364610</span></p>
+                            </div>
+                            <div class="info-item padd-15">
+                                <p>City : <span>Roorkee</span></p>
+                            </div>
+                            <div class="info-item padd-15">
+                                <p>Freelance: <span>Available</span></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="buttons padd-15">
+                                <a href="#" class="btn">Download CV</a>
+                                <a href="#contact" class="btn hire-me">Hire Me</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="skills padd-15">
+                        <div class="row">
+                            <div class="skill-item padd-15">
+                                <h5>CSS</h5>
+                                <div class="progress">
+                                    <div class="progress-in" style="width: 76%;"></div>
+                                    <div class="skill-percent">76%</div>
+                                </div>
+                            </div>
+                            <div class="skill-item padd-15">
+                                <h5>JS</h5>
+                                <div class="progress">
+                                    <div class="progress-in" style="width: 86%;"></div>
+                                    <div class="skill-percent">86%</div>
+                                </div>
+                            </div>
+                            <div class="skill-item padd-15">
+                                <h5>PHP</h5>
+                                <div class="progress">
+                                    <div class="progress-in" style="width: 66%;"></div>
+                                    <div class="skill-percent">66%</div>
+                                </div>
+                            </div>
+                            <div class="skill-item padd-15">
+                                <h5>HTML</h5>
+                                <div class="progress">
+                                    <div class="progress-in" style="width: 96%;"></div>
+                                    <div class="skill-percent">96%</div>
+                                </div>
+                            </div>
+                            <div class="skill-item padd-15">
+                                <h5>Bootstrap</h5>
+                                <div class="progress">
+                                    <div class="progress-in" style="width: 76%;"></div>
+                                    <div class="skill-percent">76%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="education padd-15">
+                                <h3 class="title">Education</h3>
+                                <div class="row">
+                                    <div class="timeline-box padd-15">
+                                        <div class="timeline shadow-dark">
+                                           <!-- ===== timeline item ===== -->
+                                  <div class="timeline-item padd-15">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="fa fa-calendar"></i>2013-2015
+                                            </h3>
+                                            <h4 class="timeline-title">Master in Computer Science</h4>
+                                            <p class="timeline-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste aspernatur dolores quas rem tenetur quo ab necessitatibus optio labore odit. Sint neque aut odio commodi!</p>
+                                           </div>
+                                       <div class="timeline-item padd-15">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="fa fa-calendar"></i>2013-2015
+                                            </h3>
+                                            <h4 class="timeline-title">Master in Computer Science</h4>
+                                            <p class="timeline-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste aspernatur dolores quas rem tenetur quo ab necessitatibus optio labore odit. Sint neque aut odio commodi!</p>
+                                           </div>
+                                     <div class="timeline-item padd-15">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="fa fa-calendar"></i>2013-2015
+                                            </h3>
+                                            <h4 class="timeline-title">Master in Computer Science</h4>
+                                            <p class="timeline-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste aspernatur dolores quas rem tenetur quo ab necessitatibus optio labore odit. Sint neque aut odio commodi!</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="experience padd-15">
+                                <h3 class="title">Experience</h3>
+                                <div class="row">
+                                    <div class="timeline-box padd-15">
+                                        <div class="timeline shadow-dark">
+                                           <!-- ===== timeline item ===== -->
+                                  <div class="timeline-item padd-15">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="fa fa-calendar"></i>2013-2015
+                                            </h3>
+                                            <h4 class="timeline-title">Master in Computer Science</h4>
+                                            <p class="timeline-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste aspernatur dolores quas rem tenetur quo ab necessitatibus optio labore odit. Sint neque aut odio commodi!</p>
+                                           </div>
+                                       <div class="timeline-item padd-15">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="fa fa-calendar"></i>2013-2015
+                                            </h3>
+                                            <h4 class="timeline-title">Master in Computer Science</h4>
+                                            <p class="timeline-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste aspernatur dolores quas rem tenetur quo ab necessitatibus optio labore odit. Sint neque aut odio commodi!</p>
+                                           </div>
+                                     <div class="timeline-item padd-15">
+                                            <div class="circle-dot"></div>
+                                            <h3 class="timeline-date">
+                                                <i class="fa fa-calendar"></i>2013-2015
+                                            </h3>
+                                            <h4 class="timeline-title">Master in Computer Science</h4>
+                                            <p class="timeline-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste aspernatur dolores quas rem tenetur quo ab necessitatibus optio labore odit. Sint neque aut odio commodi!</p>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </section>
+          <!-- ===== About Section End ===== -->
+           <!-- ===== Services Section Start ===== --> 
+           <section class="service section ">
+            <div class="container">
+                <div class="small-1">
+                <div class="row">
+                    <div class="section-title padd-15">
+                        <h2>Services</h2>
+                    </div>
+                </div>
+                <div class="row">
+                     <!-- ===== Services Item Start===== --> 
+                     <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon">
+                                <i class="fa fa-mobile-alt"></i>
+                            </div>
+                            <h4>Web Design</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque animi hic.</p>
+                        </div>
+                     </div>
+                     <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon">
+                                <i class="fa fa-laptop-code"></i>
+                            </div>
+                            <h4>Web Design</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque animi hic.</p>
+                        </div>
+                     </div>
+                     <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon">
+                                <i class="fa fa-palette"></i>
+                            </div>
+                            <h4>Web Design</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque animi hic.</p>
+                        </div>
+                     </div>
+                     <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon">
+                                <i class="fa fa-code"></i>
+                            </div>
+                            <h4>Web Design</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque animi hic.</p>
+                        </div>
+                     </div>
+                     <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <h4>Web Design</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque animi hic.</p>
+                        </div>
+                     </div>
+                     <div class="service-item padd-15">
+                        <div class="service-item-inner">
+                            <div class="icon">
+                                <i class="fa fa-bullhorn"></i>
+                            </div>
+                            <h4>Web Design</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit cumque animi hic.</p>
+                        </div>
+                     </div>
+                     <!-- ===== Services Item End===== -->
+                </div>
+                </div>
+
+            </div>
+           </section>
+           <!-- ===== Services Section End===== -->
+            <!-- ===== portfolio Section start===== -->
+            <section class="portfolio section ">
+                <div class="container">
+                    <div class="small-2">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Portfolio</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="portfolio-heading padd-15">
+                            <h2>My Last Projects : </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- portfolio item start -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="IMG-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                         <!-- portfolio item end -->
+                          <!-- portfolio item start -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="IMG-2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                         <!-- portfolio item end -->
+                          <!-- portfolio item start -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="IMG-3.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                         <!-- portfolio item end -->
+                          <!-- portfolio item start -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="IMG-4.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                         <!-- portfolio item end -->
+                          <!-- portfolio item start -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="IMG-5.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                         <!-- portfolio item end -->
+                          <!-- portfolio item start -->
+                        <div class="portfolio-item padd-15">
+                            <div class="portfolio-item-inner shadow-dark">
+                                <div class="portfolio-img">
+                                    <img src="IMG-6.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                         <!-- portfolio item end -->
+                    </div>
+                </div>
+                </div>
+            </section>
+             <!-- =====portfolio Section End===== -->
+             <!-- =====contact Section Start===== -->
+             <section class="contact section">
+                <div class="container">
+                    <div class="small-3">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Contact Me</h2>
+                        </div>
+                    </div>
+                    <h3 class="contact-title padd-15">Have You Any Question ?</h3>
+                    <h4 class="contact-sub-title padd-15">I A'M AT YOUR SERVICES</h4>
+                    <div class="row">
+                         <!-- =====contact info item start===== -->
+                         <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-phone"></i></div>
+                            <h4>Call Us On</h4>
+                            <p>8791364610</p>
+                         </div>
+                          <!-- =====contact info item End===== -->
+                           <!-- =====contact info item start===== -->
+                         <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                            <h4>Office</h4>
+                            <p>Roorkee</p>
+                         </div>
+                          <!-- =====contact info item End===== -->
+                           <!-- =====contact info item start===== -->
+                         <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-envelope"></i></div>
+                            <h4>Email</h4>
+                            <p>kyadav94501@gmail.com</p>
+                         </div>
+                          <!-- =====contact info item End===== -->
+                           <!-- =====contact info item start===== -->
+                         <div class="contact-info-item padd-15">
+                            <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                            <h4>website</h4>
+                            <p>www.domain.com</p>
+                         </div>
+                          <!-- =====contact info item End===== -->
+                    </div>
+                    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
+                    <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
+                    <!-- =====Contact Form===== -->
+                    <div class="row">
+                        <div class="contact-form padd-15">
+                            <div class="row">
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="name">
+                                    </div>
+                                </div>
+                                <div class="form-item col-6 padd-15">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="subject">
+                                    </div>
+                                </div>
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <textarea name="" class="form-control" placeholder="Message" ></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-item col-12 padd-15">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn">Send Me Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+             </section>
+             <!-- =====contact Section End===== -->
+    </div>  
+        <!-- ===== Main Content End ===== -->
+          <!-- ===== style switcher start ===== -->
+          <div class="style-switcher">
+            <div class="style-switcher-toggler s-icon"><i class="fas fa-cog fa-spin"></i></div>
+            <div class="day-night s-icon">
+                <i class="fas fa-moon"></i>
+            </div>
+            <h4>Theme Colors</h4>
+            <div class="colors">
+                <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+                <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+                <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+                <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+                <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+            </div>
+          </div>
+      <!-- ===== style switcher End ===== -->
+</div>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>my portfolio</title>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<style >
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+		body{
+			/*background-image: url('pexels-pixabay-268533.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;*/
+			background-color: rgb(3, 63, 86);
+		}
+		.header{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			padding: 20px 10%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			z-index: 100;
+
+		}
+		
+		 .logo {
+			text-decoration: none;
+			font-size: 40px;
+			color: yellow ;
+			font-weight: 800;
+			cursor: default;
+			-webkit-box-reflect: below -10px linear-gradient(transparent,#0005);
+			opacity: 0;
+			animation: slidetop 1s ease forwards;
+
+		}
+		.navbar a{
+			font-size: 18px;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 500;
+			margin-left: 35px;
+			transition: .3s ;
+            opacity: 0;
+            animation: slidetop .5s ease forwards;
+            animation-delay: calc(.2s * var(--i));
+
+		}
+		.navbar a:hover,
+		.navbar a.active {
+			color: #0ef;
+			box-shadow: 10px 10px 10px rgb(3, 239, 248);
+			text-decoration: underline;
+		}
+		
+		.home{
+			color: #000;
+			position: absolute;
+			padding-top: 200px;
+			padding-left: 80px;
+			justify-content: space-between;
+			display: flex;
+
+		}
+		.home-content pre{
+			
+			font-weight: 500;
+			font-size: 20px;
+			padding-top: 25px;
+
+		}
+		.img{
+			padding-left: 200px;
+			padding-bottom: 250px;
+			height: 50rem;
+			width: 40rem;
+			/*background-color: darkred;
+			display: flex;*/
+		}
+		.img img{
+			/*border-radius: 50%;*/
+		  /*background: transparent;*/
+			
+			height:40rem;
+			width:30rem;
+
+		}
+	
+
+		.home-content h1,.ani {
+			color:rgba(2, 238, 238, 0.957);
+			line-height: 40px;
+			font-weight: 600;
+			
+
+		}
+		.social a{
+			display: inline-block;
+			justify-content: center;
+			align-items: center;
+			padding-top: 6px;
+		    text-align: center;
+			width: 40px;
+			height: 40px;
+			background-color: #111;
+		    border: 2px solid #111;
+		    border-radius: 50%;
+			font-size:26px;
+			color: rgb(12, 159, 216);
+			margin: 3px;
+			opacity: 0;
+			animation: slidetop 1s ease forwards;
+			animation-delay: calc(.2s * var(--i));
+			margin-top: 10px;
+
+		}
+		.social a:hover{
+			color: #111;
+			background-color: rgb(12, 159, 216);
+		}
+		.ani {
+       	width: 0ch;
+       	overflow: hidden;
+       	white-space: nowrap;
+       	animation: text 5s steps(20) infinite alternate;
+       	border-right: 3px solid transparent;
+       	font-size: 30px;
+       	color: #fff ;
+		padding-top: 10px;
+       }
+       @keyframes text{
+       	0%{
+       		width: 0ch;
+       	}
+       	50%{
+       		width: 18ch;
+       	}
+       }
+       .social a:hover{
+       	border-radius:  p;
+       }
+	   .active:active{
+		border:2px solid aqua;
+	   }
+       .navbar a{
+
+       	border:2px solid  rgb(0, 0, 0) ;
+       	border-radius: 15px;
+       	padding: 10px;
+       	background-color: #111;
+       	color: grey;
+       }
+
+       .navbar a:hover{
+       	border: 2px solid aqua;
+		opacity: 0.5;
+       	border-radius: 15px ;
+       	margin-left: 20px;
+       }
+       .logo:hover{
+       	padding-left: 20px;
+       	font-style: unset;
+       	 
+       }
+	   
+
+    @keyframes slidetop {
+       	0% { 
+       		opacity: 0;
+       		transform: translateY(100px);
+       		
+       	}
+       	100%{
+       		opacity: 1;
+       		transform: translateY(0);
+       	}}
+		img{
+			margin-left: 50px;
+			height: 350px;
+			border: 3px  ;
+			border-radius: 25%;
+			box-shadow: 10px 15px 30px rgb(4, 200, 254);
+			animation: slidetop 1s ease forwards;
+			animation-delay: calc(.2s * var(--i));
+			
+		}
+		img:hover{
+			box-shadow: 1px 15px 40px rgb(151, 241, 6);
+		}
+ .gimage{
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	border-radius: 40%;
+	height: auto;
+	margin-bottom: 130px;
+	
+ }
+ 
+ 
+       
+	</style>
+</head>
+<body>
+   <header class="header">
+		<a href="#" class="logo">Portfolio</a>
+		<nav class="navbar">
+			<a href=portfolio.html style="--i:1" class=" active ">Home</a>
+			<a href="about.html" style="--i:2;">About</a>
+			<a href="education.html" style="--i:3;">Education</a>
+			<a href="skills.html" style="--i:4;">Skills</a>
+			<a href="contact.html" style="--i:5;">Contact</a>
+		</nav>
+	</header>
+	<section class="home">
+   	<div class="home-content">
+   		<h3 style="font-size:35px;"> Hello,It's Me</h3>
+   		<h1 style="font-weight:650; font-size: 30px;">Gaurav Kumar</h1>
+   		<h3 style="font-size:35px;">And I'm a <h3 class="ani">Frontend Developer</h3></h3>
+   		<p style="font: size 29px;">
+   		<pre style="color: rgb(148, 233, 239);">
+I am Gaurav Kumar . I am the student of 2nd year of 
+b.tech(cse) from QUANTUM UNIVERSITY
+sapiente official ut minus Lorem ipsum dolor sit amet 
+consectetur adipisicing elit. Eum cumque aliquid, a incidunt 
+corrupti delectus accusantium itaque eos maxime, eaque id saepe 
+doloribus nihil esse sapiente, natus minima ipsum perspiciatis.</pre></p>
+   		<br>
+   		<div class="social">
+   			<a href="#" style="--i:1;"><i class='bx bxl-facebook'></i></a>
+   			<a href="#" style="--i:2;"><i class='bx bxl-linkedin'></i></a>
+   			<a href="#" style="--i:3;"><i class='bx bxl-instagram-alt'></i></a>
+   			<a href="#" style="--i:4;"><i class='bx bxl-twitter'></i></a>
+   			
+   	  </div>
+   	</div>
+   	<div class="gimage">
+		<img src="g.jpeg">
+   	</div>
+   </section>
+
+</body>
+</html>
